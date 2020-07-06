@@ -13,6 +13,7 @@
 		2A84EC4A24B382DE0073F488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A84EC4824B382DE0073F488 /* Main.storyboard */; };
 		2A84EC4C24B382E00073F488 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A84EC4B24B382E00073F488 /* Assets.xcassets */; };
 		2A84EC4F24B382E00073F488 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A84EC4D24B382E00073F488 /* LaunchScreen.storyboard */; };
+		2A84EC5A24B383E30073F488 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A84EC5924B383E30073F488 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2A84EC4B24B382E00073F488 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A84EC4E24B382E00073F488 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A84EC5024B382E00073F488 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A84EC5924B383E30073F488 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		2A84EC4124B382DE0073F488 /* JSONDecoder Nested API using Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				2A84EC5824B383260073F488 /* Model */,
+				2A84EC5724B3831F0073F488 /* View */,
+				2A84EC5624B383130073F488 /* Controller */,
 				2A84EC4224B382DE0073F488 /* AppDelegate.swift */,
 				2A84EC4424B382DE0073F488 /* SceneDelegate.swift */,
-				2A84EC4624B382DE0073F488 /* ViewController.swift */,
-				2A84EC4824B382DE0073F488 /* Main.storyboard */,
 				2A84EC4B24B382E00073F488 /* Assets.xcassets */,
 				2A84EC4D24B382E00073F488 /* LaunchScreen.storyboard */,
 				2A84EC5024B382E00073F488 /* Info.plist */,
 			);
 			path = "JSONDecoder Nested API using Storyboard";
+			sourceTree = "<group>";
+		};
+		2A84EC5624B383130073F488 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2A84EC4624B382DE0073F488 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2A84EC5724B3831F0073F488 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2A84EC4824B382DE0073F488 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2A84EC5824B383260073F488 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A84EC5924B383E30073F488 /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A84EC5A24B383E30073F488 /* User.swift in Sources */,
 				2A84EC4724B382DE0073F488 /* ViewController.swift in Sources */,
 				2A84EC4324B382DE0073F488 /* AppDelegate.swift in Sources */,
 				2A84EC4524B382DE0073F488 /* SceneDelegate.swift in Sources */,
