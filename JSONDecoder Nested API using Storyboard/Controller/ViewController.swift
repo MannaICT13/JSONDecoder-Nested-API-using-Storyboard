@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     //MARK:- Properties
     var users = [User]()
     
+    @IBOutlet weak var tableView: UITableView!
     
     //MARK:- Initializers
     
