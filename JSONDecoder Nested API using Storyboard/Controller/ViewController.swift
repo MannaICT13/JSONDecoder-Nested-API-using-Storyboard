@@ -40,6 +40,9 @@ class ViewController: UIViewController {
             do{
                 self.users = try JSONDecoder().decode([User].self, from: data)
                 
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
                 for result in self.users {
                     print(result.address.geo.latitude ?? "n/a")
                 }
@@ -62,3 +65,34 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController:UITableViewDelegate,UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.users.count
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! UserCell
+      
+        let user = users[indexPath.row]
+        
+        cell.nameLbl.text = user.name
+        cell.cityLbl.text = user.address.city
+        cell.latitideLbl.text = user.address.geo.latitude
+        
+        
+        return cell
+        
+    }
+    
+    
+    
+    
+    
+}
